@@ -1,11 +1,11 @@
 <?php
 
-namespace Junges\Kafka\Producers;
+namespace Aliftech\Kafka\Producers;
 
-use Junges\Kafka\Config\Config;
-use Junges\Kafka\Contracts\KafkaProducerMessage;
-use Junges\Kafka\Contracts\MessageSerializer;
-use Junges\Kafka\Exceptions\CouldNotPublishMessage;
+use Aliftech\Kafka\Config\Config;
+use Aliftech\Kafka\Contracts\KafkaProducerMessage;
+use Aliftech\Kafka\Contracts\MessageSerializer;
+use Aliftech\Kafka\Exceptions\CouldNotPublishMessage;
 use RdKafka\Conf;
 use RdKafka\Producer as KafkaProducer;
 

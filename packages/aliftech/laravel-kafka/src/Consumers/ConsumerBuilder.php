@@ -1,13 +1,13 @@
 <?php
 
-namespace Junges\Kafka\Consumers;
+namespace Aliftech\Kafka\Consumers;
 
 use Closure;
 use InvalidArgumentException;
-use Junges\Kafka\Config\Config;
-use Junges\Kafka\Config\Sasl;
-use Junges\Kafka\Contracts\MessageDeserializer;
-use Junges\Kafka\Facades\Kafka;
+use Aliftech\Kafka\Config\Config;
+use Aliftech\Kafka\Config\Sasl;
+use Aliftech\Kafka\Contracts\MessageDeserializer;
+use Aliftech\Kafka\Facades\Kafka;
 
 class ConsumerBuilder
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Junges\Kafka\Tests\Message\Registry;
+namespace Aliftech\Kafka\Tests\Message\Registry;
 
 use AvroSchema;
 use FlixTech\SchemaRegistryApi\Registry;
-use Junges\Kafka\Contracts\KafkaAvroSchemaRegistry;
-use Junges\Kafka\Exceptions\SchemaRegistryException;
-use Junges\Kafka\Message\Registry\AvroSchemaRegistry;
-use Junges\Kafka\Tests\LaravelKafkaTestCase;
+use Aliftech\Kafka\Contracts\KafkaAvroSchemaRegistry;
+use Aliftech\Kafka\Exceptions\SchemaRegistryException;
+use Aliftech\Kafka\Message\Registry\AvroSchemaRegistry;
+use Aliftech\Kafka\Tests\LaravelKafkaTestCase;
 use ReflectionProperty;
 
 class AvroSchemaRegistryTest extends LaravelKafkaTestCase

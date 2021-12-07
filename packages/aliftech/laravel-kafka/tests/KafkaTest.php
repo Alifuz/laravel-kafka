@@ -1,15 +1,15 @@
 <?php
 
-namespace Junges\Kafka\Tests;
+namespace Aliftech\Kafka\Tests;
 
 use Illuminate\Support\Str;
-use Junges\Kafka\Consumers\ConsumerBuilder;
-use Junges\Kafka\Contracts\KafkaProducerMessage;
-use Junges\Kafka\Exceptions\CouldNotPublishMessage;
-use Junges\Kafka\Facades\Kafka;
-use Junges\Kafka\Message\Message;
-use Junges\Kafka\Message\Serializers\NullSerializer;
-use Junges\Kafka\Producers\ProducerBuilder;
+use Aliftech\Kafka\Consumers\ConsumerBuilder;
+use Aliftech\Kafka\Contracts\KafkaProducerMessage;
+use Aliftech\Kafka\Exceptions\CouldNotPublishMessage;
+use Aliftech\Kafka\Facades\Kafka;
+use Aliftech\Kafka\Message\Message;
+use Aliftech\Kafka\Message\Serializers\NullSerializer;
+use Aliftech\Kafka\Producers\ProducerBuilder;
 use Mockery as m;
 use RdKafka\Producer;
 

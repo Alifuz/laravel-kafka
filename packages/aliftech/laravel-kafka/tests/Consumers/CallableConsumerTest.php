@@ -1,11 +1,11 @@
 <?php
 
-namespace Junges\Kafka\Tests\Consumers;
+namespace Aliftech\Kafka\Tests\Consumers;
 
 use Illuminate\Support\Str;
-use Junges\Kafka\Consumers\CallableConsumer;
-use Junges\Kafka\Contracts\KafkaConsumerMessage;
-use Junges\Kafka\Tests\LaravelKafkaTestCase;
+use Aliftech\Kafka\Consumers\CallableConsumer;
+use Aliftech\Kafka\Contracts\KafkaConsumerMessage;
+use Aliftech\Kafka\Tests\LaravelKafkaTestCase;
 use RdKafka\Message;
 use stdClass;
 

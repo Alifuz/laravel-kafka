@@ -1,6 +1,6 @@
 <?php
 
-namespace Junges\Kafka;
+namespace Aliftech\Kafka;
 
 class MessageCounter
 {

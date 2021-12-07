@@ -1,12 +1,12 @@
 <?php
 
-namespace Junges\Kafka\Message\Registry;
+namespace Aliftech\Kafka\Message\Registry;
 
 use AvroSchema;
 use FlixTech\SchemaRegistryApi\Registry;
-use Junges\Kafka\Contracts\AvroSchemaRegistry as AvroSchemaRegistryContract;
-use Junges\Kafka\Contracts\KafkaAvroSchemaRegistry;
-use Junges\Kafka\Exceptions\SchemaRegistryException;
+use Aliftech\Kafka\Contracts\AvroSchemaRegistry as AvroSchemaRegistryContract;
+use Aliftech\Kafka\Contracts\KafkaAvroSchemaRegistry;
+use Aliftech\Kafka\Exceptions\SchemaRegistryException;
 
 class AvroSchemaRegistry implements AvroSchemaRegistryContract
 {

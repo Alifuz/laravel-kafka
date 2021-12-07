@@ -1,11 +1,11 @@
 <?php
 
-namespace Junges\Kafka\Tests\Message;
+namespace Aliftech\Kafka\Tests\Message;
 
 use AvroSchema;
-use Junges\Kafka\Contracts\KafkaAvroSchemaRegistry;
-use Junges\Kafka\Message\KafkaAvroSchema;
-use Junges\Kafka\Tests\LaravelKafkaTestCase;
+use Aliftech\Kafka\Contracts\KafkaAvroSchemaRegistry;
+use Aliftech\Kafka\Message\KafkaAvroSchema;
+use Aliftech\Kafka\Tests\LaravelKafkaTestCase;
 
 class KafkaAvroSchemaTest extends LaravelKafkaTestCase
 {

@@ -2,9 +2,9 @@
 
 namespace Commit;
 
-use Junges\Kafka\Commit\KafkaCommitter;
-use Junges\Kafka\Config\Config;
-use Junges\Kafka\Tests\LaravelKafkaTestCase;
+use Aliftech\Kafka\Commit\KafkaCommitter;
+use Aliftech\Kafka\Config\Config;
+use Aliftech\Kafka\Tests\LaravelKafkaTestCase;
 use Mockery as m;
 use RdKafka\Conf;
 use RdKafka\KafkaConsumer;

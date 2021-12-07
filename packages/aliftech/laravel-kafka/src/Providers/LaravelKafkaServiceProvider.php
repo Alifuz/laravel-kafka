@@ -1,16 +1,16 @@
 <?php
 
-namespace Junges\Kafka\Providers;
+namespace Aliftech\Kafka\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Junges\Kafka\Contracts\KafkaConsumerMessage;
-use Junges\Kafka\Contracts\KafkaProducerMessage;
-use Junges\Kafka\Contracts\MessageDeserializer;
-use Junges\Kafka\Contracts\MessageSerializer;
-use Junges\Kafka\Message\ConsumedMessage;
-use Junges\Kafka\Message\Deserializers\JsonDeserializer;
-use Junges\Kafka\Message\Message;
-use Junges\Kafka\Message\Serializers\JsonSerializer;
+use Aliftech\Kafka\Contracts\KafkaConsumerMessage;
+use Aliftech\Kafka\Contracts\KafkaProducerMessage;
+use Aliftech\Kafka\Contracts\MessageDeserializer;
+use Aliftech\Kafka\Contracts\MessageSerializer;
+use Aliftech\Kafka\Message\ConsumedMessage;
+use Aliftech\Kafka\Message\Deserializers\JsonDeserializer;
+use Aliftech\Kafka\Message\Message;
+use Aliftech\Kafka\Message\Serializers\JsonSerializer;
 
 class LaravelKafkaServiceProvider extends ServiceProvider
 {

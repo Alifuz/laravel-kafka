@@ -1,11 +1,11 @@
 <?php
 
-namespace Junges\Kafka\Tests\Config;
+namespace Aliftech\Kafka\Tests\Config;
 
-use Junges\Kafka\Config\Config;
-use Junges\Kafka\Config\Sasl;
-use Junges\Kafka\Contracts\Consumer;
-use Junges\Kafka\Tests\LaravelKafkaTestCase;
+use Aliftech\Kafka\Config\Config;
+use Aliftech\Kafka\Config\Sasl;
+use Aliftech\Kafka\Contracts\Consumer;
+use Aliftech\Kafka\Tests\LaravelKafkaTestCase;
 
 class ConfigTest extends LaravelKafkaTestCase
 {

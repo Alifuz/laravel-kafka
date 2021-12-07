@@ -1,9 +1,9 @@
 <?php
 
-namespace Junges\Kafka\Tests;
+namespace Aliftech\Kafka\Tests;
 
 use Exception;
-use Junges\Kafka\Commit\Contracts\Committer;
+use Aliftech\Kafka\Commit\Contracts\Committer;
 
 class FailingCommitter implements Committer
 {

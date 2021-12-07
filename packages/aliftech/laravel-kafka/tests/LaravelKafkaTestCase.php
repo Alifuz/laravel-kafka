@@ -1,11 +1,11 @@
 <?php
 
-namespace Junges\Kafka\Tests;
+namespace Aliftech\Kafka\Tests;
 
-use Junges\Kafka\Contracts\KafkaConsumerMessage;
-use Junges\Kafka\Logger;
-use Junges\Kafka\Producers\Producer;
-use Junges\Kafka\Providers\LaravelKafkaServiceProvider;
+use Aliftech\Kafka\Contracts\KafkaConsumerMessage;
+use Aliftech\Kafka\Logger;
+use Aliftech\Kafka\Producers\Producer;
+use Aliftech\Kafka\Providers\LaravelKafkaServiceProvider;
 use Mockery as m;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RdKafka\KafkaConsumer;

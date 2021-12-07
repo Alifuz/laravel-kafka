@@ -1,15 +1,15 @@
 <?php
 
-namespace Junges\Kafka\Tests\Consumers;
+namespace Aliftech\Kafka\Tests\Consumers;
 
 use Closure;
 use InvalidArgumentException;
-use Junges\Kafka\Config\Sasl;
-use Junges\Kafka\Consumers\Consumer;
-use Junges\Kafka\Consumers\ConsumerBuilder;
-use Junges\Kafka\Message\Deserializers\NullDeserializer;
-use Junges\Kafka\Tests\Fakes\FakeConsumer;
-use Junges\Kafka\Tests\LaravelKafkaTestCase;
+use Aliftech\Kafka\Config\Sasl;
+use Aliftech\Kafka\Consumers\Consumer;
+use Aliftech\Kafka\Consumers\ConsumerBuilder;
+use Aliftech\Kafka\Message\Deserializers\NullDeserializer;
+use Aliftech\Kafka\Tests\Fakes\FakeConsumer;
+use Aliftech\Kafka\Tests\LaravelKafkaTestCase;
 use RdKafka\Message;
 
 class ConsumerBuilderTest extends LaravelKafkaTestCase

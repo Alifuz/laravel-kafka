@@ -1,19 +1,19 @@
 <?php
 
-namespace Junges\Kafka\Consumers;
+namespace Aliftech\Kafka\Consumers;
 
 use Closure;
-use Junges\Kafka\Commit\CommitterFactory;
-use Junges\Kafka\Commit\Contracts\Committer;
-use Junges\Kafka\Commit\NativeSleeper;
-use Junges\Kafka\Config\Config;
-use Junges\Kafka\Contracts\KafkaConsumerMessage;
-use Junges\Kafka\Contracts\MessageDeserializer;
-use Junges\Kafka\Exceptions\KafkaConsumerException;
-use Junges\Kafka\Logger;
-use Junges\Kafka\Message\ConsumedMessage;
-use Junges\Kafka\MessageCounter;
-use Junges\Kafka\Retryable;
+use Aliftech\Kafka\Commit\CommitterFactory;
+use Aliftech\Kafka\Commit\Contracts\Committer;
+use Aliftech\Kafka\Commit\NativeSleeper;
+use Aliftech\Kafka\Config\Config;
+use Aliftech\Kafka\Contracts\KafkaConsumerMessage;
+use Aliftech\Kafka\Contracts\MessageDeserializer;
+use Aliftech\Kafka\Exceptions\KafkaConsumerException;
+use Aliftech\Kafka\Logger;
+use Aliftech\Kafka\Message\ConsumedMessage;
+use Aliftech\Kafka\MessageCounter;
+use Aliftech\Kafka\Retryable;
 use RdKafka\Conf;
 use RdKafka\KafkaConsumer;
 use RdKafka\Message;
@@ -49,7 +49,7 @@ class Consumer
     private ?Closure $onStopConsume = null;
 
     /**
-     * @param \Junges\Kafka\Config\Config $config
+     * @param \Aliftech\Kafka\Config\Config $config
      * @param MessageDeserializer $deserializer
      */
     public function __construct(private Config $config, MessageDeserializer $deserializer)
@@ -252,7 +252,7 @@ class Consumer
     /**
      * Handle the message.
      *
-     * @throws \Junges\Kafka\Exceptions\KafkaConsumerException
+     * @throws \Aliftech\Kafka\Exceptions\KafkaConsumerException
      * @throws \Throwable
      */
     private function handleMessage(Message $message): void

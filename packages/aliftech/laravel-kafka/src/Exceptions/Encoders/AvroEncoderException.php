@@ -1,6 +1,6 @@
 <?php
 
-namespace Junges\Kafka\Exceptions\Encoders;
+namespace Aliftech\Kafka\Exceptions\Encoders;
 
 use RuntimeException;
 

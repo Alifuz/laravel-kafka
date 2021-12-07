@@ -1,10 +1,10 @@
 <?php
 
-namespace Junges\Kafka\Consumers;
+namespace Aliftech\Kafka\Consumers;
 
 use Closure;
-use Junges\Kafka\Contracts\Consumer;
-use Junges\Kafka\Contracts\KafkaConsumerMessage;
+use Aliftech\Kafka\Contracts\Consumer;
+use Aliftech\Kafka\Contracts\KafkaConsumerMessage;
 use RdKafka\Message;
 
 class CallableConsumer extends Consumer

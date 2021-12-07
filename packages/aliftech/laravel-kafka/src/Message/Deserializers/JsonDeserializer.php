@@ -1,10 +1,10 @@
 <?php
 
-namespace Junges\Kafka\Message\Deserializers;
+namespace Aliftech\Kafka\Message\Deserializers;
 
-use Junges\Kafka\Contracts\KafkaConsumerMessage;
-use Junges\Kafka\Contracts\MessageDeserializer;
-use Junges\Kafka\Message\ConsumedMessage;
+use Aliftech\Kafka\Contracts\KafkaConsumerMessage;
+use Aliftech\Kafka\Contracts\MessageDeserializer;
+use Aliftech\Kafka\Message\ConsumedMessage;
 
 class JsonDeserializer implements MessageDeserializer
 {

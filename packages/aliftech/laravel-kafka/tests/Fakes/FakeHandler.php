@@ -1,9 +1,9 @@
 <?php
 
-namespace Junges\Kafka\Tests\Fakes;
+namespace Aliftech\Kafka\Tests\Fakes;
 
-use Junges\Kafka\Contracts\Consumer;
-use Junges\Kafka\Contracts\KafkaConsumerMessage;
+use Aliftech\Kafka\Contracts\Consumer;
+use Aliftech\Kafka\Contracts\KafkaConsumerMessage;
 
 class FakeHandler extends Consumer
 {

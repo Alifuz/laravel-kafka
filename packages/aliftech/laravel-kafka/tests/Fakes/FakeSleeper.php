@@ -1,8 +1,8 @@
 <?php
 
-namespace Junges\Kafka\Tests\Fakes;
+namespace Aliftech\Kafka\Tests\Fakes;
 
-use Junges\Kafka\Commit\Contracts\Sleeper;
+use Aliftech\Kafka\Commit\Contracts\Sleeper;
 
 class FakeSleeper implements Sleeper
 {

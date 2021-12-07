@@ -1,6 +1,6 @@
 <?php
 
-namespace Junges\Kafka\Config;
+namespace Aliftech\Kafka\Config;
 
 class Sasl
 {

@@ -1,17 +1,17 @@
 <?php
 
-namespace Junges\Kafka\Tests\Commit;
+namespace Aliftech\Kafka\Tests\Commit;
 
-use Junges\Kafka\Commit\BatchCommitter;
-use Junges\Kafka\Commit\CommitterFactory;
-use Junges\Kafka\Commit\KafkaCommitter;
-use Junges\Kafka\Commit\NativeSleeper;
-use Junges\Kafka\Commit\RetryableCommitter;
-use Junges\Kafka\Commit\VoidCommitter;
-use Junges\Kafka\Config\Config;
-use Junges\Kafka\Contracts\Consumer;
-use Junges\Kafka\MessageCounter;
-use Junges\Kafka\Tests\LaravelKafkaTestCase;
+use Aliftech\Kafka\Commit\BatchCommitter;
+use Aliftech\Kafka\Commit\CommitterFactory;
+use Aliftech\Kafka\Commit\KafkaCommitter;
+use Aliftech\Kafka\Commit\NativeSleeper;
+use Aliftech\Kafka\Commit\RetryableCommitter;
+use Aliftech\Kafka\Commit\VoidCommitter;
+use Aliftech\Kafka\Config\Config;
+use Aliftech\Kafka\Contracts\Consumer;
+use Aliftech\Kafka\MessageCounter;
+use Aliftech\Kafka\Tests\LaravelKafkaTestCase;
 use RdKafka\KafkaConsumer;
 
 class CommitterFactoryTest extends LaravelKafkaTestCase

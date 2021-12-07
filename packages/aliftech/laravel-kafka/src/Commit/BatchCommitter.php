@@ -1,9 +1,9 @@
 <?php
 
-namespace Junges\Kafka\Commit;
+namespace Aliftech\Kafka\Commit;
 
-use Junges\Kafka\Commit\Contracts\Committer;
-use Junges\Kafka\MessageCounter;
+use Aliftech\Kafka\Commit\Contracts\Committer;
+use Aliftech\Kafka\MessageCounter;
 
 class BatchCommitter implements Committer
 {

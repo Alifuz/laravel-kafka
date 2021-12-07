@@ -1,10 +1,10 @@
 <?php
 
-namespace Junges\Kafka\Tests\Message\Serializers;
+namespace Aliftech\Kafka\Tests\Message\Serializers;
 
-use Junges\Kafka\Contracts\KafkaProducerMessage;
-use Junges\Kafka\Message\Serializers\NullSerializer;
-use Junges\Kafka\Tests\LaravelKafkaTestCase;
+use Aliftech\Kafka\Contracts\KafkaProducerMessage;
+use Aliftech\Kafka\Message\Serializers\NullSerializer;
+use Aliftech\Kafka\Tests\LaravelKafkaTestCase;
 
 class NullSerializerTest extends LaravelKafkaTestCase
 {

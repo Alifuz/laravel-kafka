@@ -1,11 +1,11 @@
 <?php
 
-namespace Junges\Kafka\Commit;
+namespace Aliftech\Kafka\Commit;
 
 use JetBrains\PhpStorm\Pure;
-use Junges\Kafka\Commit\Contracts\Committer;
-use Junges\Kafka\Commit\Contracts\Sleeper;
-use Junges\Kafka\Retryable;
+use Aliftech\Kafka\Commit\Contracts\Committer;
+use Aliftech\Kafka\Commit\Contracts\Sleeper;
+use Aliftech\Kafka\Retryable;
 
 class RetryableCommitter implements Committer
 {

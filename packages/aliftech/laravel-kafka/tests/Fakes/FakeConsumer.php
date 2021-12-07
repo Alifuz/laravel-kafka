@@ -1,8 +1,8 @@
 <?php
 
-namespace Junges\Kafka\Tests\Fakes;
+namespace Aliftech\Kafka\Tests\Fakes;
 
-use Junges\Kafka\Contracts\KafkaConsumerMessage;
+use Aliftech\Kafka\Contracts\KafkaConsumerMessage;
 
 class FakeConsumer
 {

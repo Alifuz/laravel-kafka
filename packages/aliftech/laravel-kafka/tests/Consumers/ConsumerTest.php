@@ -1,17 +1,17 @@
 <?php
 
-namespace Junges\Kafka\Tests\Consumers;
+namespace Aliftech\Kafka\Tests\Consumers;
 
-use Junges\Kafka\Config\Config;
-use Junges\Kafka\Consumers\Consumer;
-use Junges\Kafka\Contracts\KafkaConsumerMessage;
-use Junges\Kafka\Exceptions\KafkaConsumerException;
-use Junges\Kafka\Facades\Kafka;
-use Junges\Kafka\Message\ConsumedMessage;
-use Junges\Kafka\Message\Deserializers\JsonDeserializer;
-use Junges\Kafka\Tests\Fakes\FakeConsumer;
-use Junges\Kafka\Tests\Fakes\FakeHandler;
-use Junges\Kafka\Tests\LaravelKafkaTestCase;
+use Aliftech\Kafka\Config\Config;
+use Aliftech\Kafka\Consumers\Consumer;
+use Aliftech\Kafka\Contracts\KafkaConsumerMessage;
+use Aliftech\Kafka\Exceptions\KafkaConsumerException;
+use Aliftech\Kafka\Facades\Kafka;
+use Aliftech\Kafka\Message\ConsumedMessage;
+use Aliftech\Kafka\Message\Deserializers\JsonDeserializer;
+use Aliftech\Kafka\Tests\Fakes\FakeConsumer;
+use Aliftech\Kafka\Tests\Fakes\FakeHandler;
+use Aliftech\Kafka\Tests\LaravelKafkaTestCase;
 use RdKafka\Message;
 
 class ConsumerTest extends LaravelKafkaTestCase

@@ -1,12 +1,12 @@
 <?php
 
-namespace Junges\Kafka\Message\Deserializers;
+namespace Aliftech\Kafka\Message\Deserializers;
 
 use FlixTech\AvroSerializer\Objects\RecordSerializer;
-use Junges\Kafka\Contracts\AvroMessageDeserializer;
-use Junges\Kafka\Contracts\AvroSchemaRegistry;
-use Junges\Kafka\Contracts\KafkaConsumerMessage;
-use Junges\Kafka\Message\ConsumedMessage;
+use Aliftech\Kafka\Contracts\AvroMessageDeserializer;
+use Aliftech\Kafka\Contracts\AvroSchemaRegistry;
+use Aliftech\Kafka\Contracts\KafkaConsumerMessage;
+use Aliftech\Kafka\Message\ConsumedMessage;
 
 class AvroDeserializer implements AvroMessageDeserializer
 {

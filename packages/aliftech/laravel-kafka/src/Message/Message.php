@@ -1,12 +1,12 @@
 <?php
 
-namespace Junges\Kafka\Message;
+namespace Aliftech\Kafka\Message;
 
 use Illuminate\Contracts\Support\Arrayable;
 use JetBrains\PhpStorm\ArrayShape;
 use JetBrains\PhpStorm\Pure;
-use Junges\Kafka\AbstractMessage;
-use Junges\Kafka\Contracts\KafkaProducerMessage;
+use Aliftech\Kafka\AbstractMessage;
+use Aliftech\Kafka\Contracts\KafkaProducerMessage;
 
 class Message extends AbstractMessage implements Arrayable, KafkaProducerMessage
 {

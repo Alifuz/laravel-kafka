@@ -1,8 +1,8 @@
 <?php
 
-namespace Junges\Kafka\Commit;
+namespace Aliftech\Kafka\Commit;
 
-use Junges\Kafka\Commit\Contracts\Committer;
+use Aliftech\Kafka\Commit\Contracts\Committer;
 
 class VoidCommitter implements Committer
 {

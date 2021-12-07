@@ -1,11 +1,11 @@
 <?php
 
-namespace Junges\Kafka\Tests\Commit;
+namespace Aliftech\Kafka\Tests\Commit;
 
-use Junges\Kafka\Commit\RetryableCommitter;
-use Junges\Kafka\Tests\FailingCommitter;
-use Junges\Kafka\Tests\Fakes\FakeSleeper;
-use Junges\Kafka\Tests\LaravelKafkaTestCase;
+use Aliftech\Kafka\Commit\RetryableCommitter;
+use Aliftech\Kafka\Tests\FailingCommitter;
+use Aliftech\Kafka\Tests\Fakes\FakeSleeper;
+use Aliftech\Kafka\Tests\LaravelKafkaTestCase;
 use RdKafka\Exception as RdKafkaException;
 
 class RetryableCommitterTest extends LaravelKafkaTestCase

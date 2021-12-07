@@ -1,14 +1,14 @@
 <?php
 
-namespace Junges\Kafka\Tests\Message\Serializers;
+namespace Aliftech\Kafka\Tests\Message\Serializers;
 
 use FlixTech\AvroSerializer\Objects\RecordSerializer;
-use Junges\Kafka\Contracts\AvroSchemaRegistry;
-use Junges\Kafka\Contracts\KafkaAvroSchemaRegistry;
-use Junges\Kafka\Contracts\KafkaProducerMessage;
-use Junges\Kafka\Exceptions\Encoders\AvroEncoderException;
-use Junges\Kafka\Message\Serializers\AvroSerializer;
-use Junges\Kafka\Tests\LaravelKafkaTestCase;
+use Aliftech\Kafka\Contracts\AvroSchemaRegistry;
+use Aliftech\Kafka\Contracts\KafkaAvroSchemaRegistry;
+use Aliftech\Kafka\Contracts\KafkaProducerMessage;
+use Aliftech\Kafka\Exceptions\Encoders\AvroEncoderException;
+use Aliftech\Kafka\Message\Serializers\AvroSerializer;
+use Aliftech\Kafka\Tests\LaravelKafkaTestCase;
 
 class AvroSerializerTest extends LaravelKafkaTestCase
 {

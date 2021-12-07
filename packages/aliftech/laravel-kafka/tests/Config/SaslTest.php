@@ -1,9 +1,9 @@
 <?php
 
-namespace Junges\Kafka\Tests\Config;
+namespace Aliftech\Kafka\Tests\Config;
 
-use Junges\Kafka\Config\Sasl;
-use Junges\Kafka\Tests\LaravelKafkaTestCase;
+use Aliftech\Kafka\Config\Sasl;
+use Aliftech\Kafka\Tests\LaravelKafkaTestCase;
 
 class SaslTest extends LaravelKafkaTestCase
 {

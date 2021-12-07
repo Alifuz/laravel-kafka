@@ -1,6 +1,6 @@
 <?php
 
-namespace Junges\Kafka\Exceptions;
+namespace Aliftech\Kafka\Exceptions;
 
 class KafkaConsumerException extends LaravelKafkaException
 {

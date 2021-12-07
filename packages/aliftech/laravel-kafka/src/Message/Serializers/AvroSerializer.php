@@ -1,14 +1,14 @@
 <?php
 
-namespace Junges\Kafka\Message\Serializers;
+namespace Aliftech\Kafka\Message\Serializers;
 
 use AvroSchema;
 use FlixTech\AvroSerializer\Objects\RecordSerializer;
-use Junges\Kafka\Contracts\AvroMessageSerializer;
-use Junges\Kafka\Contracts\AvroSchemaRegistry;
-use Junges\Kafka\Contracts\KafkaAvroSchemaRegistry;
-use Junges\Kafka\Contracts\KafkaProducerMessage;
-use Junges\Kafka\Exceptions\Encoders\AvroEncoderException;
+use Aliftech\Kafka\Contracts\AvroMessageSerializer;
+use Aliftech\Kafka\Contracts\AvroSchemaRegistry;
+use Aliftech\Kafka\Contracts\KafkaAvroSchemaRegistry;
+use Aliftech\Kafka\Contracts\KafkaProducerMessage;
+use Aliftech\Kafka\Exceptions\Encoders\AvroEncoderException;
 
 class AvroSerializer implements AvroMessageSerializer
 {

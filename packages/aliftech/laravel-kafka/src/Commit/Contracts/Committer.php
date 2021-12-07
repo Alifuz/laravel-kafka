@@ -1,6 +1,6 @@
 <?php
 
-namespace Junges\Kafka\Commit\Contracts;
+namespace Aliftech\Kafka\Commit\Contracts;
 
 interface Committer
 {

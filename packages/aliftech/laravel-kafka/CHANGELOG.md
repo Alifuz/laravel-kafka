@@ -22,7 +22,7 @@ All relevant changes to `mateusjunges/laravel-kafka` will be documented here.
 
 ## [2021-11-23 v1.4.0](https://github.com/mateusjunges/laravel-kafka/compare/v1.3.1...v1.4.0)
 ### Fixed
-- Reworked testing framework to properly check what was dispatched ([#ec8b3f6](https://github.com/mateusjunges/laravel-kafka/commit/ec8b3f61998a0d85723b1b7457c76ac3fffda345)) 
+- Reworked testing framework to properly check what was dispatched ([#ec8b3f6](https://github.com/mateusjunges/laravel-kafka/commit/ec8b3f61998a0d85723b1b7457c76ac3fffda345))
 - Fixed incorrect param ordering on test ([#1022799](https://github.com/mateusjunges/laravel-kafka/commit/10227992b055ea745a29f13015c3f2bbff5d8687))
 - Fixed KafkaFake to store published messages correctly ([#4fe6e96](https://github.com/mateusjunges/laravel-kafka/commit/4fe6e96ab253eab88e0b50233e939a3bbf16e385))
 - Added tests to ensure count of published messages works ([#7ea370f](https://github.com/mateusjunges/laravel-kafka/commit/7ea370f150c9bf122d67b1e4f4b3e1750ef7f7fa))
@@ -51,7 +51,7 @@ All relevant changes to `mateusjunges/laravel-kafka` will be documented here.
 
 ## [2021-11-05 v1.1.3](https://github.com/mateusjunges/laravel-kafka/compare/v1.1.2...v1.1.3)
 ### Added
-- Allow usage of custom options for producer config ([#38ca04](https://github.com/mateusjunges/laravel-kafka/commit/38ca04c15b1feea10c33e9865377f712a1809d40)) 
+- Allow usage of custom options for producer config ([#38ca04](https://github.com/mateusjunges/laravel-kafka/commit/38ca04c15b1feea10c33e9865377f712a1809d40))
 
 ## [2021-10-20 v1.1.2](https://github.com/mateusjunges/laravel-kafka/compare/v1.1.1...v1.1.2)
 ### Added
@@ -69,15 +69,15 @@ All relevant changes to `mateusjunges/laravel-kafka` will be documented here.
 ### Added
 - Added option to use custom serializers/deserializers with Kafka([#5](https://github.com/mateusjunges/laravel-kafka/pull/5))
 - Added default AVRO, Json and Null serializers/deserializers ([#5](https://github.com/mateusjunges/laravel-kafka/pull/5))
-- Message handlers now receives a `Junges\Kafka\Contracts\KafkaConsumerMessage` instance, instead of `RdKafka\Message` directly.
+- Message handlers now receives a `Aliftech\Kafka\Contracts\KafkaConsumerMessage` instance, instead of `RdKafka\Message` directly.
 
 ### Changed
-- `Junges\Kafka\Message` class namespace changed to `Junges\Kafka\Message\Message`
-- Method `withMessageKey` renamed to `withBodyKey`, on `Junges\Kafka\Message\Message` and `Junges\Kafka\Producers\ProducerBuilder` classes. ([b41c310](https://github.com/mateusjunges/laravel-kafka/pull/5/commits/b41c310f5e4acb8a09500ddc222456642b8787da))
+- `Aliftech\Kafka\Message` class namespace changed to `Aliftech\Kafka\Message\Message`
+- Method `withMessageKey` renamed to `withBodyKey`, on `Aliftech\Kafka\Message\Message` and `Aliftech\Kafka\Producers\ProducerBuilder` classes. ([b41c310](https://github.com/mateusjunges/laravel-kafka/pull/5/commits/b41c310f5e4acb8a09500ddc222456642b8787da))
 
 
 ## [2021-09-25 v1.0.2](https://github.com/mateusjunges/laravel-kafka/compare/v1.0.1...v1.0.2)
-### Added 
+### Added
 - Add documentation to the config file
 - Add tag to publish config file
 

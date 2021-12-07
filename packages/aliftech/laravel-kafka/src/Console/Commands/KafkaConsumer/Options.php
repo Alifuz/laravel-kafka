@@ -1,6 +1,6 @@
 <?php
 
-namespace Junges\Kafka\Console\Commands\KafkaConsumer;
+namespace Aliftech\Kafka\Console\Commands\KafkaConsumer;
 
 class Options
 {

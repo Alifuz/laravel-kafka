@@ -1,10 +1,10 @@
 <?php
 
-namespace Junges\Kafka\Commit;
+namespace Aliftech\Kafka\Commit;
 
-use Junges\Kafka\Commit\Contracts\Committer;
-use Junges\Kafka\Config\Config;
-use Junges\Kafka\MessageCounter;
+use Aliftech\Kafka\Commit\Contracts\Committer;
+use Aliftech\Kafka\Config\Config;
+use Aliftech\Kafka\MessageCounter;
 use RdKafka\KafkaConsumer;
 
 class CommitterFactory

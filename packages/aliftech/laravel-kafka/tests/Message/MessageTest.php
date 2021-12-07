@@ -1,10 +1,10 @@
 <?php
 
-namespace Junges\Kafka\Tests\Message;
+namespace Aliftech\Kafka\Tests\Message;
 
 use Illuminate\Support\Str;
-use Junges\Kafka\Message\Message;
-use Junges\Kafka\Tests\LaravelKafkaTestCase;
+use Aliftech\Kafka\Message\Message;
+use Aliftech\Kafka\Tests\LaravelKafkaTestCase;
 
 class MessageTest extends LaravelKafkaTestCase
 {

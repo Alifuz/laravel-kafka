@@ -1,9 +1,9 @@
 <?php
 
-namespace Junges\Kafka\Config;
+namespace Aliftech\Kafka\Config;
 
 use JetBrains\PhpStorm\Pure;
-use Junges\Kafka\Contracts\Consumer;
+use Aliftech\Kafka\Contracts\Consumer;
 
 class Config
 {

@@ -16,12 +16,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Junges\\Kafka\\": "src/"
+            "Aliftech\\Kafka\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Junges\\Kafka\\Tests\\": "tests/"
+            "Aliftech\\Kafka\\Tests\\": "tests/"
         }
     },
     "license": "MIT",
@@ -39,7 +39,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Junges\\Kafka\\Providers\\LaravelKafkaServiceProvider"
+                "Aliftech\\Kafka\\Providers\\LaravelKafkaServiceProvider"
             ]
         }
     }

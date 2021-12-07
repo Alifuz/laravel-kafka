@@ -1,9 +1,9 @@
 <?php
 
-namespace Junges\Kafka\Message;
+namespace Aliftech\Kafka\Message;
 
 use AvroSchema;
-use Junges\Kafka\Contracts\KafkaAvroSchemaRegistry;
+use Aliftech\Kafka\Contracts\KafkaAvroSchemaRegistry;
 
 class KafkaAvroSchema implements KafkaAvroSchemaRegistry
 {

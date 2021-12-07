@@ -1,9 +1,9 @@
 <?php
 
-namespace Junges\Kafka\Contracts;
+namespace Aliftech\Kafka\Contracts;
 
-use Junges\Kafka\Config\Sasl;
-use Junges\Kafka\Message\Message;
+use Aliftech\Kafka\Config\Sasl;
+use Aliftech\Kafka\Message\Message;
 
 interface CanProduceMessages
 {

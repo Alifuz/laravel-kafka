@@ -1,11 +1,11 @@
 <?php
 
-namespace Junges\Kafka\Tests;
+namespace Aliftech\Kafka\Tests;
 
 use Illuminate\Support\Str;
-use Junges\Kafka\Facades\Kafka;
-use Junges\Kafka\Message\Message;
-use Junges\Kafka\Support\Testing\Fakes\KafkaFake;
+use Aliftech\Kafka\Facades\Kafka;
+use Aliftech\Kafka\Message\Message;
+use Aliftech\Kafka\Support\Testing\Fakes\KafkaFake;
 use PHPUnit\Framework\Constraint\ExceptionMessage;
 use PHPUnit\Framework\ExpectationFailedException;
 

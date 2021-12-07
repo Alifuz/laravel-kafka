@@ -1,8 +1,8 @@
 <?php
 
-namespace Junges\Kafka\Commit;
+namespace Aliftech\Kafka\Commit;
 
-use Junges\Kafka\Commit\Contracts\Sleeper;
+use Aliftech\Kafka\Commit\Contracts\Sleeper;
 
 class NativeSleeper implements Sleeper
 {

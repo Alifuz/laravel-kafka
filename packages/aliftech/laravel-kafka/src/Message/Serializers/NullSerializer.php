@@ -1,9 +1,9 @@
 <?php
 
-namespace Junges\Kafka\Message\Serializers;
+namespace Aliftech\Kafka\Message\Serializers;
 
-use Junges\Kafka\Contracts\KafkaProducerMessage;
-use Junges\Kafka\Contracts\MessageSerializer;
+use Aliftech\Kafka\Contracts\KafkaProducerMessage;
+use Aliftech\Kafka\Contracts\MessageSerializer;
 
 class NullSerializer implements MessageSerializer
 {

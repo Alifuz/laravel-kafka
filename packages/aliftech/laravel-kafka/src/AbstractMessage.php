@@ -1,8 +1,8 @@
 <?php
 
-namespace Junges\Kafka;
+namespace Aliftech\Kafka;
 
-use Junges\Kafka\Contracts\KafkaMessage;
+use Aliftech\Kafka\Contracts\KafkaMessage;
 
 abstract class AbstractMessage implements KafkaMessage
 {

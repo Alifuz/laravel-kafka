@@ -1,9 +1,9 @@
 <?php
 
-namespace Junges\Kafka\Support\Testing\Fakes;
+namespace Aliftech\Kafka\Support\Testing\Fakes;
 
-use Junges\Kafka\Config\Config;
-use Junges\Kafka\Message\Message;
+use Aliftech\Kafka\Config\Config;
+use Aliftech\Kafka\Message\Message;
 use RdKafka\Conf;
 
 class ProducerFake

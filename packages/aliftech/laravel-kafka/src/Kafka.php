@@ -1,11 +1,11 @@
 <?php
 
-namespace Junges\Kafka;
+namespace Aliftech\Kafka;
 
-use Junges\Kafka\Consumers\ConsumerBuilder;
-use Junges\Kafka\Contracts\CanProduceMessages;
-use Junges\Kafka\Contracts\CanPublishMessagesToKafka;
-use Junges\Kafka\Producers\ProducerBuilder;
+use Aliftech\Kafka\Consumers\ConsumerBuilder;
+use Aliftech\Kafka\Contracts\CanProduceMessages;
+use Aliftech\Kafka\Contracts\CanPublishMessagesToKafka;
+use Aliftech\Kafka\Producers\ProducerBuilder;
 
 class Kafka implements CanPublishMessagesToKafka
 {
@@ -30,7 +30,7 @@ class Kafka implements CanPublishMessagesToKafka
      * @param array $topics
      * @param string|null $groupId
      * @param string|null $brokers
-     * @return \Junges\Kafka\Consumers\ConsumerBuilder
+     * @return \Aliftech\Kafka\Consumers\ConsumerBuilder
      */
     public function createConsumer(array $topics = [], string $groupId = null, string $brokers = null): ConsumerBuilder
     {

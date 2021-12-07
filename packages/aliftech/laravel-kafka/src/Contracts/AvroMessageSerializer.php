@@ -1,6 +1,6 @@
 <?php
 
-namespace Junges\Kafka\Contracts;
+namespace Aliftech\Kafka\Contracts;
 
 interface AvroMessageSerializer extends MessageSerializer
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Junges\Kafka\Contracts;
+namespace Aliftech\Kafka\Contracts;
 
-use Junges\Kafka\Exceptions\SchemaRegistryException;
+use Aliftech\Kafka\Exceptions\SchemaRegistryException;
 
 interface AvroSchemaRegistry
 {

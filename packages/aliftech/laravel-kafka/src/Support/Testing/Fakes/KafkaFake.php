@@ -1,12 +1,12 @@
 <?php
 
-namespace Junges\Kafka\Support\Testing\Fakes;
+namespace Aliftech\Kafka\Support\Testing\Fakes;
 
 use Illuminate\Support\Collection;
 use JetBrains\PhpStorm\Pure;
-use Junges\Kafka\Contracts\CanPublishMessagesToKafka;
-use Junges\Kafka\Contracts\KafkaProducerMessage;
-use Junges\Kafka\Message\Message;
+use Aliftech\Kafka\Contracts\CanPublishMessagesToKafka;
+use Aliftech\Kafka\Contracts\KafkaProducerMessage;
+use Aliftech\Kafka\Message\Message;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 class KafkaFake implements CanPublishMessagesToKafka

@@ -1,21 +1,21 @@
 <?php
 
-namespace Junges\Kafka\Console\Commands;
+namespace Aliftech\Kafka\Console\Commands;
 
 use Illuminate\Console\Command;
-use Junges\Kafka\Config\Config;
-use Junges\Kafka\Config\Sasl;
-use Junges\Kafka\Console\Commands\KafkaConsumer\Options;
-use Junges\Kafka\Consumers\Consumer;
+use Aliftech\Kafka\Config\Config;
+use Aliftech\Kafka\Config\Sasl;
+use Aliftech\Kafka\Console\Commands\KafkaConsumer\Options;
+use Aliftech\Kafka\Consumers\Consumer;
 
 class KafkaConsumerCommand extends Command
 {
-    protected $signature = 'kafka:consume 
-            {--topic=* : The topic to listen for messages} 
-            {--consumer= : The consumer which will consume messages in the specified topic} 
-            {--groupId= : The consumer group id} 
-            {--commit=1} 
-            {--dlq= : The Dead Letter Queue} 
+    protected $signature = 'kafka:consume
+            {--topic=* : The topic to listen for messages}
+            {--consumer= : The consumer which will consume messages in the specified topic}
+            {--groupId= : The consumer group id}
+            {--commit=1}
+            {--dlq= : The Dead Letter Queue}
             {--maxMessage= : The max number of messages that should be handled}';
     protected $description = 'A Kafka Consumer for Laravel.';
 

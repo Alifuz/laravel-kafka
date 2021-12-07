@@ -1,6 +1,6 @@
 <?php
 
-namespace Junges\Kafka;
+namespace Aliftech\Kafka;
 
 use Monolog\Formatter\JsonFormatter;
 use Monolog\Handler\StreamHandler;

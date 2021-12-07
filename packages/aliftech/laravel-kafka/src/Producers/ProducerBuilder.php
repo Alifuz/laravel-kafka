@@ -1,13 +1,13 @@
 <?php
 
-namespace Junges\Kafka\Producers;
+namespace Aliftech\Kafka\Producers;
 
-use Junges\Kafka\Config\Config;
-use Junges\Kafka\Config\Sasl;
-use Junges\Kafka\Contracts\CanProduceMessages;
-use Junges\Kafka\Contracts\KafkaProducerMessage;
-use Junges\Kafka\Contracts\MessageSerializer;
-use Junges\Kafka\Message\Message;
+use Aliftech\Kafka\Config\Config;
+use Aliftech\Kafka\Config\Sasl;
+use Aliftech\Kafka\Contracts\CanProduceMessages;
+use Aliftech\Kafka\Contracts\KafkaProducerMessage;
+use Aliftech\Kafka\Contracts\MessageSerializer;
+use Aliftech\Kafka\Message\Message;
 
 class ProducerBuilder implements CanProduceMessages
 {
@@ -29,7 +29,7 @@ class ProducerBuilder implements CanProduceMessages
     }
 
     /**
-     * Return a new Junges\Commit\ProducerBuilder instance
+     * Return a new Aliftech\Commit\ProducerBuilder instance
      * @param string $topic
      * @param string|null $broker
      * @return static

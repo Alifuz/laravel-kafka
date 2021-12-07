@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        \Junges\Kafka\Console\Commands\KafkaConsumerCommand::class,
+        \Aliftech\Kafka\Console\Commands\KafkaConsumerCommand::class,
     ];
 
     /**

@@ -1,11 +1,11 @@
 <?php
 
-namespace Junges\Kafka\Tests\Commit;
+namespace Aliftech\Kafka\Tests\Commit;
 
-use Junges\Kafka\Commit\BatchCommitter;
-use Junges\Kafka\Commit\Contracts\Committer;
-use Junges\Kafka\MessageCounter;
-use Junges\Kafka\Tests\LaravelKafkaTestCase;
+use Aliftech\Kafka\Commit\BatchCommitter;
+use Aliftech\Kafka\Commit\Contracts\Committer;
+use Aliftech\Kafka\MessageCounter;
+use Aliftech\Kafka\Tests\LaravelKafkaTestCase;
 
 class BatchCommitterTest extends LaravelKafkaTestCase
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Junges\Kafka;
+namespace Aliftech\Kafka;
 
 use Exception;
-use Junges\Kafka\Commit\Contracts\Sleeper;
+use Aliftech\Kafka\Commit\Contracts\Sleeper;
 
 class Retryable
 {
