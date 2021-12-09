@@ -1,0 +1,29 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ eventNamespace }};
+
+class {{ class }}
+{
+    /**
+     * Create the topic message handler.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Handle the topic message.
+     *
+     * @param  \{{ BaseMessage }}  $message
+     * @return void
+     */
+    public function handle($message)
+    {
+        //
+    }
+}

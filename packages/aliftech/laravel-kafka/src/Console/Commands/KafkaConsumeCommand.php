@@ -8,7 +8,7 @@ use Aliftech\Kafka\Config\Sasl;
 use Aliftech\Kafka\Console\Commands\KafkaConsumer\Options;
 use Aliftech\Kafka\Consumers\Consumer;
 
-class KafkaConsumerCommand extends Command
+class KafkaConsumeCommand extends Command
 {
     protected $signature = 'kafka:consume
             {--topic=* : The topic to listen for messages}

@@ -16,11 +16,16 @@ class LaravelKafkaServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
-        $this->publishesConfiguration();
+        $this->offerPublishing();
+        $this->registerCommands();
     }
 
     public function register()
     {
+        // fallback config
+        $this->mergeConfigFrom(
+            __DIR__.'/../../config/kafka.php', 'kafka'
+        );
         $this->app->bind(MessageSerializer::class, function () {
             return new JsonSerializer();
         });
@@ -36,10 +41,38 @@ class LaravelKafkaServiceProvider extends ServiceProvider
         $this->app->bind(KafkaConsumerMessage::class, ConsumedMessage::class);
     }
 
-    private function publishesConfiguration()
+    /**
+     * Setup the resource publishing groups for Horizon.
+     *
+     * @return void
+     */
+    protected function offerPublishing()
     {
+
         $this->publishes([
-            __DIR__."/../../config/kafka.php" => config_path('kafka.php'),
-        ], 'laravel-kafka-config');
+            __DIR__.'/../../config/kafka.php' => config_path('kafka.php'),
+        ], 'kafka-config');
+
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../../stubs/KafkaServiceProvider.stub' => app_path('Providers/KafkaServiceProvider.php'),
+            ], 'kafka-provider');
+        }
+    }
+
+    /**
+     * Register the Horizon Artisan commands.
+     *
+     * @return void
+     */
+    protected function registerCommands()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                \Aliftech\Kafka\Console\Commands\KafkaConsumeCommand::class,
+                \Aliftech\Kafka\Console\Commands\MessageMakeCommand::class,
+                \Aliftech\Kafka\Console\Commands\TopicMakeCommand::class,
+            ]);
+        }
     }
 }

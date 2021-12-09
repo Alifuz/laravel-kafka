@@ -1,5 +1,6 @@
 <?php
 
+use App\Kafka\Messages\FirstMessage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/publish', function () {
+    dd(FirstMessage::create('some fifth variable yeap')->publish());
 });

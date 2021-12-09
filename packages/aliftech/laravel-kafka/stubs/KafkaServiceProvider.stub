@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Providers;
+
+use Aliftech\Kafka\Providers\LaravelKafkaServiceProvider;
+
+class KafkaServiceProvider extends LaravelKafkaServiceProvider
+{
+    /**
+     * The topic consumer mappings for the application.
+     *
+     * @var array
+     */
+    protected $consume = [
+        // FirstTopic::class => [
+        //     HandleTopic::class,
+        //     SendNotification::class,
+        // ],
+    ];
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot(): void
+    {
+        parent::boot();
+
+        //
+    }
+}
