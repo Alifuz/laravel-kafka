@@ -83,6 +83,7 @@ class LaravelKafkaServiceProvider extends ServiceProvider
                 \Aliftech\Kafka\Console\KafkaConsumeCommand::class,
                 \Aliftech\Kafka\Console\MessageMakeCommand::class,
                 \Aliftech\Kafka\Console\TopicMakeCommand::class,
+                \Aliftech\Kafka\Console\HandlerMakeCommand::class,
             ]);
         }
     }

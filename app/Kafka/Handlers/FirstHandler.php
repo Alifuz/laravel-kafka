@@ -1,10 +1,10 @@
 <?php
 
-namespace {{ namespace }};
+namespace App\Kafka\Handlers;
 
 use Aliftech\Kafka\AbstractHandler;
 
-class {{ class }} extends AbstractHandler
+class FirstHandler extends AbstractHandler
 {
     /**
      * Handle the topic message.
@@ -14,6 +14,6 @@ class {{ class }} extends AbstractHandler
      */
     public function handle($message): void
     {
-        //
+        dd($message);
     }
 }

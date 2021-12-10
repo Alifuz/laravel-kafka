@@ -52,6 +52,7 @@ class KafkaConsumeCommand extends Command
     public function handle()
     {
         // Start the consumers
+        $this->comment('Starting the consumer...');
         $this->getConsumer()->consume();
     }
 

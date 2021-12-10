@@ -48,7 +48,7 @@ class TopicMakeCommand extends GeneratorCommand
      */
     protected function resolveStubPath($stub)
     {
-        return __DIR__.'/../../../stubs/'.$stub;
+        return __DIR__.'/../../stubs/'.$stub;
     }
 
     /**
