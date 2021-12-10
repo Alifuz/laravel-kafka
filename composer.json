@@ -1,5 +1,5 @@
 {
-    "name": "mateusjunges/laravel-kafka",
+    "name": "aliftech/laravel-kafka",
     "description": "A kafka driver for laravel",
     "type": "library",
     "require": {
@@ -27,8 +27,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "mateusjunges",
-            "email": "mateus@junges.dev",
+            "name": "Karimov Javokhir",
+            "email": "info@Aliftech.uz",
             "role": "Backend Software Engineer"
         }
     ],
