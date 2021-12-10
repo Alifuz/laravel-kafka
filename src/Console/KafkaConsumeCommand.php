@@ -25,8 +25,6 @@ class KafkaConsumeCommand extends Command
     {
         parent::__construct();
 
-        $this->subscribe = app('kafka.subscribe');
-
         $this->config = [
             'autoCommit' => config('kafka.auto_commit'),
             'dlqTopic' => config('kafka.dlq_topic'),
@@ -47,6 +45,9 @@ class KafkaConsumeCommand extends Command
      */
     public function handle()
     {
+        // set subscribers before handling it
+        $this->subscribe = app('kafka.subscribe');
+
         // Start the consumers
         $this->comment('Starting the consumer...');
         $this->getConsumer()->consume();
