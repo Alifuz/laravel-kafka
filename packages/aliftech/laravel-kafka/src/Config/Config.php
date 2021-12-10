@@ -64,7 +64,6 @@ class Config
             'metadata.broker.list' => $this->broker,
             'auto.offset.reset' => config('kafka.offset_reset', 'latest'),
             'enable.auto.commit' => config('kafka.auto_commit', 'true'),
-            'compression.codec' => config('kafka.compression', 'none'),
             'group.id' => $this->groupId,
             'bootstrap.servers' => $this->broker,
         ];

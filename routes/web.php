@@ -1,5 +1,7 @@
 <?php
 
+use Aliftech\Kafka\Facades\Kafka;
+use Aliftech\Kafka\Message\Message;
 use App\Kafka\Messages\FirstMessage;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/publish', function () {
-    dd(FirstMessage::create('some fifth variable yeap')->publish());
+
+// $message = new Message(
+//     headers: ['header-key' => 'header-value'],
+//     body: ['key' => 'value'],
+//     key: 'kafka key here'
+// );
+
+// dd(Kafka::publishOn('topic')->withMessage($message)->send());
+$message = new FirstMessage(12, 'my_username it is');
+    dd($message->publish());
 });

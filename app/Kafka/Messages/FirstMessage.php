@@ -16,16 +16,18 @@ class FirstMessage extends BaseMessage
     /**
      * Message variables to be transfered to Kafka. they should be public only.
      */
-    public string $var1;
+    public string $id;
+    public string $username;
 
     /**
      * Contruct a new message and set props here
      *
      * @return void
      */
-    public function __construct(string $var1)
+    public function __construct(int $id, string $username)
     {
-        $this->var1 = $var1;
+        $this->id = $id;
+        $this->username = $username;
     }
 
 }

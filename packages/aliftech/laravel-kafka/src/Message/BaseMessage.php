@@ -16,16 +16,17 @@ class BaseMessage
 {
     use SerializesModels;
 
-    protected array $_brokers = [];
+    protected ?string $_brokers = null;
     protected array $_headers = [];
     protected ?string $_topic = null;
     protected ?string $_message_key = null;
 
     public static function create(...$args) {
-        return new (get_called_class())(...$args);
+        return new static(...$args);
     }
 
     public function publish() {
+        // dd($this->getMessageBody());
         return $this->configureProducer()->send(); // failed_messages
     }
 
@@ -35,9 +36,9 @@ class BaseMessage
             ->getProducer()
             ->withSasl($this->getSaslConfig())
             ->withKafkaKey($this->getMessageKey())
-            ->withHeaders($this->getHeaders())
+            ->withHeaders($this->getMessageHeaders())
             ->usingSerializer(new JsonSerializer)
-            ->withMessage((new Message())->withBody($this->getBody()));
+            ->withMessage($this->getMessage());
     }
 
     private function getProducer() {
@@ -48,24 +49,31 @@ class BaseMessage
     }
 
     private function getBrokersList() {
-        return !count($this->_brokers) ?
-            config('kafka.brokers') : implode(',', $this->brokers);
+        return $this->_brokers ?? config('kafka.brokers');
+    }
+
+    private function getMessage() {
+        return new Message(
+            headers: $this->getMessageHeaders(),
+            body: $this->getMessageBody(),
+            key: $this->getMessageKey()
+        );
     }
 
     private function getTopicKey(): string {
-        return @$this->_topic ?: @get_class_vars($this->_topic)['topic_key'];
+        return !@$this->_topic ? null : @get_class_vars($this->_topic)['topic_key'];
     }
 
     private function getMessageKey(): string {
         return $this->_message_key;
     }
 
-    private function getHeaders(): array {
+    private function getMessageHeaders(): array {
         return $this->_headers;
     }
 
-    private function getBody(): array {
-        return get_object_vars($this);
+    private function getMessageBody(): array {
+        return get_class_vars(get_class($this));
     }
 
     private function getSaslConfig() {

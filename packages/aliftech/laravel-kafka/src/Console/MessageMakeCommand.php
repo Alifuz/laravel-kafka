@@ -1,11 +1,11 @@
 <?php
 
-namespace Aliftech\Kafka\Console\Commands;
+namespace Aliftech\Kafka\Console;
 
 use Illuminate\Console\Concerns\CreatesMatchingTest;
 use Illuminate\Console\GeneratorCommand;
 
-class TopicMakeCommand extends GeneratorCommand
+class MessageMakeCommand extends GeneratorCommand
 {
     use CreatesMatchingTest;
 
@@ -14,21 +14,21 @@ class TopicMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'make:topic';
+    protected $name = 'make:message';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create a new kafka topic class';
+    protected $description = 'Create a new kafka message class';
 
     /**
      * The type of class being generated.
      *
      * @var string
      */
-    protected $type = 'Topic';
+    protected $type = 'Message';
 
     /**
      * Get the stub file for the generator.
@@ -37,7 +37,7 @@ class TopicMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return $this->resolveStubPath('topic.stub');
+        return $this->resolveStubPath('message.stub');
     }
 
     /**
@@ -70,7 +70,7 @@ class TopicMakeCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Kafka\Topics';
+        return $rootNamespace.'\Kafka\Messages';
     }
 
 }

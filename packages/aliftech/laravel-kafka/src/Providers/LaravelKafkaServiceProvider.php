@@ -22,10 +22,8 @@ class LaravelKafkaServiceProvider extends ServiceProvider
 
     public function register()
     {
-        // fallback config
-        $this->mergeConfigFrom(
-            __DIR__.'/../../config/kafka.php', 'kafka'
-        );
+        $this->configure();
+
         $this->app->bind(MessageSerializer::class, function () {
             return new JsonSerializer();
         });
@@ -41,6 +39,20 @@ class LaravelKafkaServiceProvider extends ServiceProvider
         $this->app->bind(KafkaConsumerMessage::class, ConsumedMessage::class);
     }
 
+
+    /**
+     * Setup the configuration for Horizon.
+     *
+     * @return void
+     */
+    protected function configure()
+    {
+        // fallback config
+        $this->mergeConfigFrom(
+            __DIR__.'/../../config/kafka.php', 'kafka'
+        );
+    }
+
     /**
      * Setup the resource publishing groups for Horizon.
      *
@@ -48,15 +60,13 @@ class LaravelKafkaServiceProvider extends ServiceProvider
      */
     protected function offerPublishing()
     {
-
-        $this->publishes([
-            __DIR__.'/../../config/kafka.php' => config_path('kafka.php'),
-        ], 'kafka-config');
-
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../../stubs/KafkaServiceProvider.stub' => app_path('Providers/KafkaServiceProvider.php'),
             ], 'kafka-provider');
+            $this->publishes([
+                __DIR__.'/../../config/kafka.php' => config_path('kafka.php'),
+            ], 'kafka-config');
         }
     }
 
@@ -69,9 +79,10 @@ class LaravelKafkaServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                \Aliftech\Kafka\Console\Commands\KafkaConsumeCommand::class,
-                \Aliftech\Kafka\Console\Commands\MessageMakeCommand::class,
-                \Aliftech\Kafka\Console\Commands\TopicMakeCommand::class,
+                \Aliftech\Kafka\Console\InstallCommand::class,
+                \Aliftech\Kafka\Console\KafkaConsumeCommand::class,
+                \Aliftech\Kafka\Console\MessageMakeCommand::class,
+                \Aliftech\Kafka\Console\TopicMakeCommand::class,
             ]);
         }
     }
