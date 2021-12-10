@@ -6,7 +6,8 @@ use Aliftech\Kafka\Config\Sasl;
 use Aliftech\Kafka\Message\Serializers\JsonSerializer;
 use Aliftech\Kafka\Producers\ProducerBuilder;
 use Exception;
-use Illuminate\Queue\SerializesModels;
+use ReflectionClass;
+use ReflectionProperty;
 
 // topic
 // partition
@@ -14,20 +15,34 @@ use Illuminate\Queue\SerializesModels;
 
 class BaseMessage
 {
-    use SerializesModels;
 
-    protected ?string $_brokers = null;
-    protected array $_headers = [];
-    protected ?string $_topic = null;
-    protected ?string $_message_key = null;
+    protected ?string $topic_class = null;
+    private ?string $_brokers = null;
+    private array $_headers = [];
+    private ?string $_message_key = null;
 
     public static function create(...$args) {
         return new static(...$args);
     }
 
-    public function publish() {
-        // dd($this->getMessageBody());
+    public function publish(): bool {
         return $this->configureProducer()->send(); // failed_messages
+    }
+
+    public function setHeaders(array $headers): void {
+        $this->_headers = $headers;
+    }
+
+    public function setBrokers(string $brokers): void {
+        $this->_brokers = $brokers;
+    }
+
+    public function setKey(array $key): void {
+        $this->_message_key = $key;
+    }
+
+    public function setTopic(string $topic): void {
+        $this->topic_class = $topic;
     }
 
 
@@ -61,7 +76,7 @@ class BaseMessage
     }
 
     private function getTopicKey(): string {
-        return !@$this->_topic ? null : @get_class_vars($this->_topic)['topic_key'];
+        return !@$this->topic_class ? null : @get_class_vars($this->topic_class)['topic_key'];
     }
 
     private function getMessageKey(): string {
@@ -73,7 +88,16 @@ class BaseMessage
     }
 
     private function getMessageBody(): array {
-        return get_class_vars(get_class($this));
+
+        $message = new ReflectionClass($this);
+
+        $body = [];
+        foreach ($message->getProperties(ReflectionProperty::IS_PUBLIC) as $prop) {
+            $prop = $prop->getName();
+            $body[$prop] = $this->{$prop};
+        }
+
+        return $body;
     }
 
     private function getSaslConfig() {

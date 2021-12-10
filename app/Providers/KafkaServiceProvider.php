@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Aliftech\Kafka\Providers\KafkaApplicationServiceProvider;
+use App\Kafka\Handlers\FirstHandler;
 use App\Kafka\Topics\FirstTopic;
 
 class KafkaServiceProvider extends KafkaApplicationServiceProvider
@@ -14,8 +15,7 @@ class KafkaServiceProvider extends KafkaApplicationServiceProvider
      */
     protected $subscribe = [
         FirstTopic::class => [
-            HandleTopic::class,
-            SendNotification::class,
+            FirstHandler::class
         ],
     ];
     /**

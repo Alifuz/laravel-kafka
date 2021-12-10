@@ -7,24 +7,12 @@ use Aliftech\Kafka\Message\BaseMessage;
 class {{ class }} extends BaseMessage
 {
     /**
-     * Message defualt configs. they should be protected only.
+     * Topic that the message will be sent to.
      */
-    protected ?string $_topic = Topic::class;
-    protected ?string $_message_key = '';
+    protected $topic_class = Topic::class;
 
     /**
      * Message variables to be transfered to Kafka. they should be public only.
      */
-    public string $var1;
-
-    /**
-     * Contruct a new message and set props here
-     *
-     * @return void
-     */
-    public function __construct(string $var1)
-    {
-        $this->var1 = $var1;
-    }
-
+    public string $var_1;
 }
