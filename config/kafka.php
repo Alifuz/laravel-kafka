@@ -53,6 +53,11 @@ return [
     'auto_commit' => env('KAFKA_AUTO_COMMIT', true),
 
     /**
+     * DLQ - Dead Latter Queue. this is a topic name which will be used to write failed-to-handle messages.
+     */
+    'dlq_topic' => env('KAFKA_DLQ', 'dlq-topic'),
+
+    /**
      * Kafka supports 4 compression codecs: none , gzip , lz4 and snappy
      */
     'compression' => env('KAFKA_COMPRESSION_TYPE', 'snappy'),

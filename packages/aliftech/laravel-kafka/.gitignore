@@ -1,8 +1,0 @@
-/vendor/
-node_modules/
-/.vagrant
-.phpunit.result.cache
-.idea
-tests/reports
-.php-cs-fixer.cache
-composer.lock
