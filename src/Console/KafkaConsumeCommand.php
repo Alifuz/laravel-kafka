@@ -3,14 +3,10 @@
 namespace Aliftech\Kafka\Console;
 
 use Illuminate\Console\Command;
-use Aliftech\Kafka\Config\Config;
 use Aliftech\Kafka\Config\Sasl;
 use Aliftech\Kafka\Console\KafkaConsumer\Handler;
 use Aliftech\Kafka\Console\KafkaConsumer\Options;
-use Aliftech\Kafka\Consumers\Consumer;
 use Aliftech\Kafka\Consumers\ConsumerBuilder;
-use Aliftech\Kafka\Contracts\MessageDeserializer;
-use Aliftech\Kafka\Facades\Kafka;
 
 class KafkaConsumeCommand extends Command
 {

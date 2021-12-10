@@ -3,7 +3,6 @@
 namespace Aliftech\Kafka\Console\KafkaConsumer;
 
 use Aliftech\Kafka\AbstractHandler;
-use Illuminate\Support\Facades\Log;
 
 class Handler
 {

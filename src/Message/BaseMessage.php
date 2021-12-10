@@ -9,10 +9,6 @@ use Exception;
 use ReflectionClass;
 use ReflectionProperty;
 
-// topic
-// partition
-// brokers
-
 class BaseMessage
 {
 
