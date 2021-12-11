@@ -8,11 +8,10 @@ Do you want to use kafka in your laravel projects? Most of the packages I've see
 
 This package provides a nice way of producing (publishing) and consuming (subscribing & handling) kafka messages in your Laravel projects.
 
-Follow these docs to install this package and start using kafka in your laravel projects (Docs might be incomplete. work in progress!).
+Follow these docs to install this package and start using kafka in your laravel projects.
 
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Concept](#concept)
 - [Publishing Messages](#publishing-messages)
     - [Topics](#topics)
     - [Messages](#messages)
@@ -47,13 +46,15 @@ php artisan kafka:install
 
 After publishing Kafka's assets, its primary configuration file will be located at `config/kafka.php`.
 
-# Concept
-
-The concept of pub/sub in kafka is accomplished with Producers and Consumers. Producers will publish messages to topics and Consumers will subscribe to topics and listen for new messages. Topics are like types of events and messages are like DTO objects to deliver data from one source to many.
-
 # Publishing a message
 
 A message can be published to a topic. To achieve that, you need to create a topic model and message [DTO](https://en.wikipedia.org/wiki/Data_transfer_object).
+
+The concept of pub/sub in kafka is accomplished with Producers and Consumers. Producers will publish messages to topics and Consumers will subscribe to topics and listen for new messages. Topics are like events and messages are like DTO objects to deliver data from one source to many.
+
+Messages should have the same data structures when they are sent to the same topic. To solve this problem, every message is created as a class with a data structure and can only be published to a unique topic.
+
+
 
 ## Topics
 
