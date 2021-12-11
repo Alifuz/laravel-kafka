@@ -12,14 +12,20 @@ Follow these docs to install this package and start using kafka in your laravel 
 
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Publishing a message](#publishing-a-message)
+- [Concept](#concept)
+- [Publishing Messages](#publishing-messages)
     - [Topics](#topics)
     - [Messages](#messages)
     - [Publishing](#publishing)
-- [Subscribing to a topic](#subscribe-to-a-topic)
-    - [Message Handler](#message-handler)
-    - [Running the Consumer](#running-the-consumer)
-- [Naming the topics](#naming-the-topics)
+- [Subscribing To Topics](#subscribe-to-topics)
+    - [Message Handlers](#message-handlers)
+        - [Creating Handlers](#creating-handlers)
+        - [Handling Logics](#handle-logics)
+        - [Using Middlewares](#using-middlewares)
+    - [Registering Handlers](#registering-handlers)
+    - [Running Consumer](#running-consumer)
+- [Run Consumer With Supervisor](#run-consumer-with-supervisor)
+- [Naming Topics](#naming-topics)
 
 # Installation
 To install this package, you must have installed PHP RdKafka extension. First, follow the steps [here](https://github.com/edenhill/librdkafka#installation)
@@ -40,6 +46,10 @@ php artisan kafka:install
 # Configuration
 
 After publishing Kafka's assets, its primary configuration file will be located at `config/kafka.php`.
+
+# Concept
+
+The concept of pub/sub in kafka is accomplished with Producers and Consumers. Producers will publish messages to topics and Consumers will subscribe to topics and listen for new messages. Topics are like types of events and messages are like DTO objects to deliver data from one source to many.
 
 # Publishing a message
 
@@ -72,7 +82,7 @@ Messages are created in `./app/Kafka/Messages` folder with the following artisan
 php artisan make:message MyMessage
 ```
 
-And now, you have to connect the corresponding topic:
+And now, you have to connect to a corresponding topic:
 
 ```php
 /**
@@ -112,7 +122,7 @@ In order to publish the message to the topic, `publish()` method should be calle
 ```php
 use App\Kafka\Messages\MyMessage;
 
-// if there isn't a contructor
+// you can create a message object
 $message = MyMessage::create(1, 'My name changed', 'file2.jpg', false);
 // or
 $message = new MyMessage(1, 'My name changed', 'file2.jpg', false);
