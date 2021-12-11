@@ -12,14 +12,14 @@ Follow these docs to install this package and start using kafka in your laravel 
 
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Publishing a message](#publish)
+- [Publishing a message](#publishing-a-message)
     - [Topics](#topics)
     - [Messages](#messages)
     - [Publishing](#publishing)
-- [Subscribing to a topic](#subscribe)
-    - [Message Handler](#handler)
-    - [Running the Consumer](#consumer)
-- [Naming the topic](#naming)
+- [Subscribing to a topic](#subscribe-to-a-topic)
+    - [Message Handler](#message-handler)
+    - [Running the Consumer](#running-the-consumer)
+- [Naming the topics](#naming-the-topics)
 
 # Installation
 To install this package, you must have installed PHP RdKafka extension. First, follow the steps [here](https://github.com/edenhill/librdkafka#installation)
