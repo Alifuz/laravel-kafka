@@ -52,7 +52,9 @@ A message can be published to a topic. To achieve that, you need to create a top
 
 The concept of pub/sub in kafka is accomplished with Producers and Consumers. Producers will publish messages to topics and Consumers will subscribe to topics and listen for new messages. Topics are like events and messages are like DTO objects to deliver data from one source to many.
 
-Messages should have the same data structures when they are sent to the same topic. To solve this problem, every message is created as a class with a data structure and can only be published to a unique topic.
+Messages should have the same data structures when they are sent to the same topic. To solve this problem, every message is created as a separate class with a data structure and it can only be published to a unique topic. Meaning that, single Topic cannot receive two messages with different data structures.
+
+Think of Topics as Tables(in database). You cannot insert two records with different structures into the table.
 
 
 
