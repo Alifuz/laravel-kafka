@@ -27,7 +27,6 @@ class KafkaConsumeCommand extends Command
 
         $this->config = [
             'autoCommit' => config('kafka.auto_commit'),
-            'dlqTopic' => config('kafka.dlq_topic'),
             'brokers' => config('kafka.brokers'),
             'groupId' => config('kafka.consumer_group_id'),
             'securityProtocol' => config('kafka.securityProtocol'),
@@ -68,7 +67,7 @@ class KafkaConsumeCommand extends Command
             topics: $options->getTopics(),
             groupId: $options->getGroupId()
         )
-            ->withDlq($options->getDlqTopic())
+            ->withDlq()
             // ->withCommitBatchSize(1)
             // ->withMaxCommitRetries(6)
             ->withMaxMessages($options->getMaxMessage())
