@@ -1,11 +1,13 @@
 <?php
 
+use Illuminate\Support\Str;
+
 return [
 
     /**
      * Your kafka brokers url.
      */
-    'brokers' => env('KAFKA_BROKERS', 'srv302.alifshop.uz:9093'),
+    'brokers' => env('KAFKA_BROKERS', 'localhost:9092'),
 
     /**
      * Kafka consumers belonging to the same consumer group share a group id.
@@ -13,7 +15,7 @@ return [
      * establishing that each partition is only consumed by a single consumer from the group.
      * This config defines the consumer group id you want to use for your project.
      */
-    'consumer_group_id' => env('KAFKA_CONSUMER_GROUP_ID', 'group'),
+    'consumer_group_id' => env('KAFKA_CONSUMER_GROUP_ID', 'laravel_' . Str::slug(env('APP_NAME')) . '_consumer'),
 
     /**
      * Security protocol for authenticating with kafka brokers
