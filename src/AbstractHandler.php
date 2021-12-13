@@ -6,10 +6,22 @@ use Closure;
 
 abstract class AbstractHandler
 {
+    /**
+     * Handle the topic message
+     *
+     * @param $message
+     * @return void
+     */
     abstract public function handle($message): void;
 
-    public function middleware($message, Closure $next): Closure
+    /**
+     * Middleware to be passed before handling the message
+     *
+     * @param $message
+     * @return void
+     */
+    public function middleware($message, Closure $next): void
     {
-        return $next($message);
+        $next($message);
     }
 }

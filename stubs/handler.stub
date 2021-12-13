@@ -7,7 +7,7 @@ use Aliftech\Kafka\AbstractHandler;
 class {{ class }} extends AbstractHandler
 {
     /**
-     * Handle the topic message.
+     * Handle the topic message
      *
      * @param $message
      * @return void
