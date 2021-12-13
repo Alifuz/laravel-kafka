@@ -9,7 +9,7 @@ class {{ class }} extends BaseMessage
     /**
      * Topic that the message will be sent to.
      */
-    protected $topic_class = Topic::class;
+    protected string $topic_class = Topic::class;
 
     /**
      * Message variables to be transfered to Kafka. they should be public only.
