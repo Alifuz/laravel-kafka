@@ -13,7 +13,7 @@ class BaseMessage
 {
 
     protected string $topic_class;
-    private string $_brokers = '';
+    private string $_brokers;
     private array $_headers = [];
     private string $_message_key = '';
 
