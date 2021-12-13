@@ -39,7 +39,7 @@ You may now install Laravel Kafka into your project using the Composer package m
 composer require aliftech/laravel-kafka
 ```
 
-After installing Laravel Kafka, publish its assets using the kafka:install Artisan command:
+After installing Laravel Kafka, publish its assets using the `kafka:install` Artisan command:
 
 ```text
 php artisan kafka:install
